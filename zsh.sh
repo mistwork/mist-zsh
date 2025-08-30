@@ -1,3 +1,4 @@
 echo "Script is running..."
-sudo apt update
-sudo apt install zsh -y
+apt update
+apt install zsh -y
+CMD ["zsh"]
