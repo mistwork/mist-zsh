@@ -26,6 +26,8 @@ sed -i 's/${AGNOSTER_GIT_DIRTY_BG:=yellow}/${AGNOSTER_GIT_DIRTY_FG:=black}/' ~/.
 sed -i 's/${AGNOSTER_DIR_BG:=blue}/${AGNOSTER_DIR_BG:=white}/' ~/.oh-my-zsh/themes/agnoster.zsh-theme
 sed -i 's/robbyrussell/agnoster/' ~/.zshrc
 
+sed -i 's/CURRENT_FG=${CURRENT_FG:-'black'}/CURRENT_FG=${CURRENT_FG:-'white'}/' ~/.oh-my-zsh/themes/agnoster.zsh-theme
+
 if [ -d "$HOME/.zsh-syntax-highlighting" ]; then
     echo "Removing existing zsh-syntax-highlighting..."
     rm -rf "$HOME/.zsh-syntax-highlighting"
