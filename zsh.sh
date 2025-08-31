@@ -12,6 +12,7 @@ echo "y" | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh
 clear
 cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 sed -i 's/${AGNOSTER_STATUS_ROOT_FG:=yellow}/${AGNOSTER_STATUS_ROOT_FG:=magenta}/' ~/.oh-my-zsh/themes/agnoster.zsh-theme
+sed -i 's/${AGNOSTER_DIR_BG:=white}/${AGNOSTER_DIR_BG:=white}/' ~/.oh-my-zsh/themes/agnoster.zsh-theme
 sed -i 's/robbyrussell/agnoster/' ~/.zshrc
 
 exec zsh
