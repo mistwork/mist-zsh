@@ -37,3 +37,4 @@ fi
 
 exec zsh
 source ~/.zshrc
+echo -e "\e[1;32mSuccessfully installed\e[0m"
