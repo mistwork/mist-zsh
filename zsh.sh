@@ -12,5 +12,4 @@ echo "y" | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh
 clear
 cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 sed -i 's/robbyrussell/agnoster/' ~/.zshrc
-source ~/.zshrc
 exec zsh
