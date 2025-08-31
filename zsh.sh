@@ -1,7 +1,8 @@
 #!/bin/sh
 
 echo "Script is running..."
-apt update && apt install -y zsh curl
+# apt update
+apt install -y zsh curl
 clear
 apt install powerline fonts-powerline -y
 clear
