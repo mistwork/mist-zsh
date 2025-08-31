@@ -21,7 +21,6 @@ sed -i 's/${AGNOSTER_GIT_DIRTY_BG:=yellow}/${AGNOSTER_GIT_DIRTY_FG:=black}/' ~/.
 sed -i 's/${AGNOSTER_DIR_BG:=blue}/${AGNOSTER_DIR_BG:=white}/' ~/.oh-my-zsh/themes/agnoster.zsh-theme
 sed -i 's/robbyrussell/agnoster/' ~/.zshrc
 
-rm -rf ~/.oh-my-zsh ~/.zsh-syntax-highlighting ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.zsh-syntax-highlighting" --depth 1
 echo "source $HOME/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> "$HOME/.zshrc"
