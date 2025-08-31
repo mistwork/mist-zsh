@@ -27,6 +27,6 @@ echo "source $HOME/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> "$HO
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 sed -i 's/plugins=(git)/plugins=(git zsh-autosuggestions)/' ~/.oh-my-zsh/themes/agnoster.zsh-theme
 
-source ~/.zshrc
-
 exec zsh
+
+source ~/.zshrc
