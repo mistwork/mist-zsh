@@ -10,6 +10,6 @@ zsh --version
 echo "y" | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 clear
 cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
-sed -i 's/robbyrussell/agnoster/' file.txt
+sed -i 's/robbyrussell/agnoster/' ~/.zshrc
 source ~/.zshrc
 exec zsh
