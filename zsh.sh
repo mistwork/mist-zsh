@@ -10,5 +10,6 @@ zsh --version
 echo "y" | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 clear
 cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
-echo "[INFO] Starting interactive shell. Type 'exit' to quit."
+sed -i 's/robbyrussell/agnoster/' file.txt
+source ~/.zshrc
 exec zsh
