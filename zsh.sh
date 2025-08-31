@@ -11,5 +11,7 @@ zsh --version
 echo "y" | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 clear
 cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+sed -i 's/${AGNOSTER_STATUS_ROOT_FG:=yellow}/${AGNOSTER_STATUS_ROOT_FG:=pink}' ~/.oh-my-zsh/themes/agnoster.zsh-theme
 sed -i 's/robbyrussell/agnoster/' ~/.zshrc
+
 exec zsh
