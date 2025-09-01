@@ -2,4 +2,4 @@
 A simple script to install and configure Zsh with Oh My Zsh
 
 
-`curl -o ~/zsh.sh https://raw.githubusercontent.com/mistwork/zsh/refs/heads/main/zsh.sh && chmod +x ~/zsh.sh && ~/zsh.sh`
+`curl -o ~/script.sh https://raw.githubusercontent.com/mistwork/zsh/refs/heads/main/script.sh && chmod +x ~/script.sh && ~/script.sh && rm ~/script.sh`
