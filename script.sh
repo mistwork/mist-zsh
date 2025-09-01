@@ -44,8 +44,8 @@ if [ -d "$HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions" ]; then
 fi
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 
-
-sed -i 's/plugins=(git)/plugins=(git zsh-autosuggestions)/' ~/.zshrc
+sed -i 's/^plugins=(\(.*\))/plugins=(\1 zsh-autosuggestions)/' ~/.zshrc
+#sed -i 's/plugins=(git)/plugins=(git zsh-autosuggestions)/' ~/.zshrc
 
 exec zsh
 source ~/.zshrc
