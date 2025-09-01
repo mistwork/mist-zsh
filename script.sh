@@ -3,9 +3,9 @@
 echo "Script is running..."
 apt update
 apt install -y zsh curl
-#clear
+
 apt install powerline fonts-powerline -y
-#clear
+
 chsh -s $(which zsh)
 zsh --version
 
@@ -14,7 +14,7 @@ if [ -d "$HOME/.oh-my-zsh" ]; then
     rm -rf "$HOME/.oh-my-zsh"
 fi
 echo "y" | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-#clear
+
 cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 
 sed -i 's/robbyrussell/agnoster/' ~/.zshrc
@@ -33,16 +33,18 @@ sed -i "s/CURRENT_FG=\${CURRENT_FG:-'black'}/CURRENT_FG=\${CURRENT_FG:-'white'}/
 if [ -d "$HOME/.zsh-syntax-highlighting" ]; then
     echo "Removing existing zsh-syntax-highlighting..."
     rm -rf "$HOME/.zsh-syntax-highlighting"
+fi
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.zsh-syntax-highlighting" --depth 1
 echo "source $HOME/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> "$HOME/.zshrc"
-fi
+
 
 if [ -d "$HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions" ]; then
     echo "Removing existing zsh-autosuggestions..."
     rm -rf "$HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions"
+fi
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 sed -i 's/plugins=(git)/plugins=(git zsh-autosuggestions)/' ~/.oh-my-zsh/themes/agnoster.zsh-theme
-fi
+
 
 exec zsh
 source ~/.zshrc
