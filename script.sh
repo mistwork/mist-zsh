@@ -44,7 +44,12 @@ if [ -d "$HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions" ]; then
 fi
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 
-sed -i 's/^plugins=(\(.*\))/plugins=(\1 zsh-autosuggestions docker)/' ~/.zshrc
+#sed -i 's/^plugins=(\(.*\))/plugins=(\1 zsh-autosuggestions docker)/' ~/.zshrc
+for p in zsh-autosuggestions docker; do
+  if ! grep -q "$p" ~/.zshrc; then
+    sed -i "s/^plugins=(\(.*\))/plugins=(\1 $p)/" ~/.zshrc
+  fi
+done
 
 exec zsh
 source ~/.zshrc
