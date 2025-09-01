@@ -19,3 +19,13 @@ curl -o /tmp/script.sh https://raw.githubusercontent.com/mistwork/zsh/refs/heads
 bash /tmp/script.sh
 rm /tmp/script.sh
 ```
+
+-----
+
+### Плагины:
+
+Список устонавливаемых плагинов:
+- zsh-syntax-highlighting
+- zsh-autosuggestions
+- docker
+- docker-compose
