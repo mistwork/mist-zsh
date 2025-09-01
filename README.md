@@ -15,5 +15,7 @@
 ### Установка:
 Чтобы установить на сервер, выполните на нем эту команду:
 ```
-curl -s https://raw.githubusercontent.com/mistwork/zsh/refs/heads/main/script.sh | bash
+curl -o /tmp/script.sh https://raw.githubusercontent.com/mistwork/zsh/refs/heads/main/script.sh
+bash /tmp/script.sh
+rm /tmp/script.sh
 ```
